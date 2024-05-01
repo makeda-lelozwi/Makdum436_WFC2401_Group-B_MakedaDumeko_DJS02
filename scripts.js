@@ -15,5 +15,12 @@ form.addEventListener("submit", (event) => {
     result.innerText = Math.floor(answer);
   }
 
-  
+  //No values
+  const dividendEl = document.querySelector("input[name='dividend']");
+  const dividerEl = document.querySelector("input[name='divider']");
+
+  if (dividendEl.value == "" || dividerEl.value == "") {
+    result.innerText =
+      "Division not performed. Both values are required in inputs. Try again.";
+  }
 });
