@@ -15,7 +15,7 @@ form.addEventListener("submit", (event) => {
     result.innerText = Math.floor(answer);
   }
 
-  //No values and division by 0
+  //No values, division by 0, inputting non-numbers
   const dividendEl = document.querySelector("input[name='dividend']");
   const dividerEl = document.querySelector("input[name='divider']");
 
@@ -25,6 +25,9 @@ form.addEventListener("submit", (event) => {
   } else if (dividerEl.value == 0) {
     result.innerText =
       "Division not performed. Invalid number provided. Try again.";
+  } else if (isNaN(dividendEl.value) || isNaN(dividerEl.value)) {
+    document.body.innerText =
+      "Something critical went wrong. Please reload the page";
   }
 
   //
