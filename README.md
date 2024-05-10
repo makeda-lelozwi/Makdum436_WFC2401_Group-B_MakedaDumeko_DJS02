@@ -8,16 +8,18 @@ This exercise provides user stories in [the Gherkin syntax](https://docs.behat.o
 
 The existing codebase for the Whole Number Divider meets certain user stories but falls short on others. Your task is to modify and extend the code to address all specified user stories, ensuring a robust, user-friendly application.
 
-![alt text](image.png)
-
 #### Starter Code
 
-The provided HTML and JavaScript setup a basic form for inputting two numbers (dividend and divider) and a button to perform the calculation. The current script captures form submissions and displays the division result. However, it lacks validation, error handling, and the logic to meet all user stories.
+The provided HTML and JavaScript setup is a basic form for inputting two numbers (dividend and divider) and a button to perform the calculation. The current script captures form submissions and displays the division result. However, it lacks validation, error handling, and the logic to meet all user stories.
 
 <h2 style="color:#e67e22">Resolved Stories</h2>
 
 1. **Initial State**: On page load, the message “No calculation performed” is displayed, indicating no action has been taken yet.
 2. **Whole Number Division**: Upon submitting two numbers that divide evenly (e.g., 20 divided by 10), the application correctly displays the whole number result.
+3. **Dividing Numbers Resulting in a Decimal**: Upon submitting two numbers that do not divide evenly (e.g. 10 divided by 7), the application displays the rounded down solution. 
+4. **Validation for missing values**: If there are no values entered into either the divider or dividend section, the user will be prompted to input values.  
+5. **Invalid division**: If 0 is entered into the divider section, the user is prompted to input a valid number (which is not equal to 0). 
+6. 
 
 ### Scenario: Starting program state
 
@@ -31,8 +33,6 @@ The provided HTML and JavaScript setup a basic form for inputting two numbers (d
 - WHEN 20 is entered into the first input
 - AND 10 is entered into the second input
 - THEN 2 should be displayed at the bottom
-
-<h2 style="color:#e67e22">Unresolved Stories</h2>
 
 ### Scenario: Dividing numbers result in a decimal number
 
@@ -66,16 +66,7 @@ The provided HTML and JavaScript setup a basic form for inputting two numbers (d
 - THEN the entire screen should be replaced with “Something critical went wrong. Please reload the page
 - AND an error should be logged in the browser console that shows the call stack.
 
-#### Task Instructions
+#### Solution Approach
 
-1. **Review the Starter Code**: Understand the current implementation and its limitations.
-2. **Implement User Stories**: Modify the code to fulfill all unresolved user stories. Pay attention to error handling and user input validation.
-3. **Error Handling**: Ensure the application handles errors gracefully, providing clear feedback to the user without crashing.
-4. **Testing**: Test your application thoroughly with various inputs to ensure it meets all the user stories.
-
-#### Submission Requirements
-
-- Updated HTML and JavaScript files.
-- Submit your project to the LMS Project Tab for DJS02
-
-This project challenges you to think critically about user input, error handling, and providing a seamless user experience. Ensure your solution is robust, user-friendly, and meets the specified requirements.
+1. **Error Handling**: Used the try/catch coding block to check inputs and log errors to the page and the console. 
+2. **Testing**: Tested the application thoroughly with various inputs to ensure it meets all the user stories.
