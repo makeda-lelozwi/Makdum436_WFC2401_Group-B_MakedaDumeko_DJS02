@@ -7,8 +7,8 @@ form.addEventListener("submit", (event) => {
   const { dividend, divider } = Object.fromEntries(entries);
 
   //the input fields in HTML don't have classes or IDs
-  const dividendEl = document.querySelector("input[name='dividend']");
-  const dividerEl = document.querySelector("input[name='divider']");
+  const dividendEl = document.querySelector("input[name='dividend']").value;
+  const dividerEl = document.querySelector("input[name='divider']").value;
 
   let answer = Math.floor(dividend / divider);
 
@@ -16,15 +16,15 @@ form.addEventListener("submit", (event) => {
     if (dividend % divider !== 0) {
       result.innerText = answer;
     }
-    if (dividendEl.value == "" || dividerEl.value == "") {
+    if (dividendEl == "" || dividerEl == "") {
       throw new Error(
         "Division not performed. Both values are required in inputs. Try again."
       );
-    } else if (dividerEl.value == 0) {
+    } else if (dividerEl == 0) {
       throw new Error(
         "Division not performed. Invalid number provided. Try again."
       );
-    } else if (isNaN(dividendEl.value) || isNaN(dividerEl.value)) {
+    } else if (isNaN(dividendEl) || isNaN(dividerEl)) {
       throw new Error(
         (document.body.innerText =
           "Something critical went wrong. Please reload the page")
