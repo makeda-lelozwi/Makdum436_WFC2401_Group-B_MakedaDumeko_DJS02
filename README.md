@@ -2,7 +2,7 @@
 
 #### Project Overview
 
-The existing codebase for the Whole Number Divider meets certain user stories but falls short on others. Your task is to modify and extend the code to address all specified user stories, ensuring a robust, user-friendly application.
+The existing codebase for the Whole Number Divider meets certain user stories but falls short on others. I modified and extended the code to address all specified user stories, ensuring a robust, user-friendly application.
 
 #### Starter Code
 
